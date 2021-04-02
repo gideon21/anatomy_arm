@@ -25,7 +25,8 @@
             <a-asset-item id="arm" src="simple_arm_anatomy/scene.gltf"></a-asset-item>
         </a-assets>
 
-        <a-marker type='barcode' value='1' smooth="true" >
+        <a-marker type='barcode' value='1' smooth="true" raycaster="objects: .clickable" emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;" id="markerA">
             <a-entity id="arm-model" gltf-model="#arm" position="0 0 0" scale="2 2 2" class="clickable"
             gesture-handler="minScale: 0.25; maxScale: 10">
             </a-entity>
